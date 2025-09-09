@@ -17,13 +17,13 @@ function App() {
   }, []);
 
   const fetchTickets = async () => {
-    const res = await axios.get('https://nova-react-and-node.onrender.com/api/tickets');
+    const res = await axios.get('https://nova-react-and-node-f6hc.vercel.app/api/tickets');
     setTickets(res.data);
   };
 
   const submitTicket = async (e) => {
     e.preventDefault();
-    await axios.post('https://nova-react-and-node.onrender.com/api/tickets', {
+    await axios.post('https://nova-react-and-node-f6hc.vercel.app/api/tickets', {
       ticketNumber,
       projectAddress,
       expirationDate
