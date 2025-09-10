@@ -11,7 +11,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI || "mongodb+srv://abhayrahar7_db_user:rACsHEwh27ZUPb5K@cluster0.2ekg8st.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const ticketSchema = new mongoose.Schema({
     ticketNumber: String,
